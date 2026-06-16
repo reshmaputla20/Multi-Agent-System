@@ -2,9 +2,10 @@
 env/
 venv/
 .venv/
+github.txt
 
 # Python
-__pycache__/
+__pycache__/    
 *.py[cod]
 *.pyo
 
@@ -31,3 +32,4 @@ dist/
 
 # Logs
 *.log
+
