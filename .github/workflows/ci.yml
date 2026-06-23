@@ -23,5 +23,9 @@ jobs:
         pip install -r requirements.txt
 
     - name: Run basic import check
+      env:
+        LLM_PROVIDER: openai
+        OPENAI_API_KEY: dummy-key
+        OPENAI_MODEL: gpt-4o-mini
       run: |
         python -c "import main; print('App imports successfully')"
