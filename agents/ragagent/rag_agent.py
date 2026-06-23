@@ -23,7 +23,7 @@ class RagAgent(BaseAgent):
     
     async def health_check(self):
         return {
-            "agent":"raga_agent",
+            "agent":"rag_agent",
             "status":"healthy"
         }
 
