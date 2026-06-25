@@ -1,6 +1,13 @@
 from config.settings import Settings
 from agents.ragagent.rag_agent import RagAgent
 from common.llm.llm_factory import LLMFactory
+from Tools.retriever import SimpleRetriever
+
+
+with open("data/rag.txt") as file:
+    docs = file.read()
+
+retriever = SimpleRetriever(docs)
 
 settings = Settings()
 # print("settings", settings.LLM_PROVIDER, settings.OPENAI_API_KEY, settings.OPENAI_MODEL)
@@ -27,5 +34,6 @@ else:
 
 #injecting llm to agent
 rag_agent = RagAgent(
-    llm_service=llm_Service
+    llm_service=llm_Service,
+    retriever=retriever
 )

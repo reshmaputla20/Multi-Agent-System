@@ -1,0 +1,1 @@
+It grounds the AI in factual, domain-specific knowledge to prevent hallucinations and keep answers up-to-date without the massive cost of retraining
